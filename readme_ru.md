@@ -39,7 +39,7 @@ git clone https://github.com/iondv/fias.git
 --------------------------------------------------------------------------  
 
 
- #### [Licence](/LICENSE) &ensp;  [Contact us](https://iondv.com) &ensp;  [Russian](/readme_ru.md)   &ensp; [FAQs](/faqs.md)          
+ #### [Licence](/LICENSE) &ensp;  [Contact us](https://iondv.com) &ensp;  [English](/readme.md)   &ensp; [FAQs](/faqs.md)          
 
 <div><img src="https://mc.iondv.com/watch/local/docs/app/fias" style="position:absolute; left:-9999px;" height=1 width=1 alt="iondv metrics"></div>
 
