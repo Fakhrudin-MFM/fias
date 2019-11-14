@@ -1,0 +1,24 @@
+{
+  "name": "ion-web-platform",
+  "version": "1.0.0",
+  "homepage": "https://git.iondv.ru/ION/ion-portal",
+  "bugs": {
+    "url": "https://ion-dv.atlassian.net/browse/IONPORTAL"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.iondv.ru/ION-APP/fias.git"
+  },
+  "private": true,
+  "dependencies": {
+    "encoding": "latest",
+    "stream-dbf": "latest"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "code": "fullAddress.streetFull",
+  "namespace": "fias",
+  "orderNumber": 60,
+  "type": 1,
+  "title": "",
+  "caption": "Улицы",
+  "classname": "street@fias",
+  "container": null,
+  "collection": null,
+  "url": null,
+  "hint": null,
+  "conditions": [],
+  "sorting": [],
+  "pathChains": [],
+  "metaVersion": "2.0.61.15909"
+}

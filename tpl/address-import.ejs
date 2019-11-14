@@ -1,0 +1,69 @@
+<% layout('../../../modules/ionadmin/view/templates/layouts/content') -%>
+
+<div id="importAddressCatalogForm">
+  <label for="regionFilter">Фильтр по региону</label>
+  <input type="text" class="form-control" id="regionFilter" placeholder="Двузначное число">
+  <button id="importBtn" class="btn btn-success">Импорт реестра адресов</button>
+  <div id="logs"></div>
+</div>
+
+<script>
+  jQuery(function () {
+    var loader = $('#global-loader');
+    var regFilter = $('#regionFilter');
+    var importBtn = $('#importBtn');
+    var logs = $('#logs');
+    var percents = $('<span class="percents"></span>');
+    var finished = true;
+
+    function createLog (log) {
+      logs.prepend(`<div class="${log.type}"><span>${log.message}</span></div>`);
+    }
+
+    function getInfo () {
+      $.post('/ionadmin/address-import/info').
+      done(function (data) {
+        messageCallout.hide();
+        if (data.logs) {
+          for (var i = 0; i < data.logs.length; i++) {
+            createLog(data.logs[i]);
+          }
+          $('div:first', logs).append(percents);
+        }
+
+        if (data.progress) {
+          percents.text(data.progress);
+        }
+        if (data.finished) {
+          finished = true;
+          messageCallout.info('Выполнение завершено');
+          importBtn.prop('disabled', false);
+          percents.text('');
+        }
+      }).fail(function (xhr) {
+        messageCallout.error(xhr.responseText, 'Произошла ошибка при получении информацию о ходе импорта.');
+      }).always(function () {
+        if (!finished) {
+          setTimeout(getInfo, regFilter.val() ? 1500 : 5000);
+        }
+      });
+    }
+
+    importBtn.click(function () {
+      messageCallout.hide();
+      logs.empty();
+      loader.show();
+      $.post('/ionadmin/address-import/start', {regionFilter: regFilter.val()}).
+      done(function (data) {
+        createLog({type: 'log', message: data});
+        importBtn.prop('disabled', true);
+        finished = false;
+        getInfo();
+      }).fail(function (xhr) {
+        messageCallout.error(xhr.responseText, 'Произошла ошибка при запуске импорта реестра адресов.');
+      }).always(function () {
+        loader.hide();
+      });
+    });
+  });
+</script>

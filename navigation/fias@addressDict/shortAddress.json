@@ -1,0 +1,17 @@
+{
+  "code": "shortAddress",
+  "namespace": "fias",
+  "orderNumber": 20,
+  "type": 0,
+  "title": "",
+  "caption": "Наследуемые сущности (до нас. пункта)",
+  "classname": null,
+  "container": null,
+  "collection": null,
+  "url": null,
+  "hint": null,
+  "conditions": [],
+  "sorting": [],
+  "pathChains": [],
+  "metaVersion": "2.0.61.15909"
+}

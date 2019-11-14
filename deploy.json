@@ -1,0 +1,41 @@
+{
+  "parametrised": true,
+  "namespace": "fias",
+  "deployer": "built-in",
+  "modules": {
+    "registry": {
+      "globals": {
+        "navigation": {
+          "menus": {
+          }
+        }
+      }
+    },
+    "ionadmin": {
+      "globals": {
+        "mainMenu": [
+          {
+            "url": "/ionadmin/address-import",
+            "text": "Импорт реестра адресов",
+            "style": "fa fa-circle-o text-green"
+          }
+        ],
+        "templates": [
+          "applications/fias/tpl"
+        ],
+        "di": {
+          "addressImportController": {
+            "module": "applications/fias/lib/controllers/importer",
+            "initMethod": "init",
+            "initLevel": 0,
+            "options": {
+              "module": "ion://module",
+              "log": "ion://sysLog",
+              "src": "[[import.src]]"
+            }
+          }
+        }
+      }
+    }
+  }
+}

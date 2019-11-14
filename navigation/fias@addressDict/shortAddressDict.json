@@ -1,0 +1,17 @@
+{
+  "code": "shortAddressDict",
+  "namespace": "fias",
+  "orderNumber": 0,
+  "type": 1,
+  "title": "",
+  "caption": "Адресный объект (до нас. пункта)",
+  "classname": "shortAddressDict@fias",
+  "container": null,
+  "collection": null,
+  "url": null,
+  "hint": null,
+  "conditions": [],
+  "sorting": [],
+  "pathChains": [],
+  "metaVersion": "2.0.61.15690"
+}

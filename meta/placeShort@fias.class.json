@@ -1,0 +1,18 @@
+{
+  "namespace": "fias",
+  "isStruct": false,
+  "key": [],
+  "semantic": null,
+  "name": "placeShort",
+  "version": "",
+  "caption": "Населённый пункт",
+  "ancestor": "shortAddressDict",
+  "container": null,
+  "creationTracker": "",
+  "changeTracker": "",
+  "history": 0,
+  "journaling": false,
+  "compositeIndexes": null,
+  "properties": [],
+  "metaVersion": "2.0.61"
+}

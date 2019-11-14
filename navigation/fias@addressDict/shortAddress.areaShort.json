@@ -1,0 +1,17 @@
+{
+  "code": "shortAddress.areaShort",
+  "namespace": "fias",
+  "orderNumber": 40,
+  "type": 1,
+  "title": "",
+  "caption": "Район",
+  "classname": "areaShort@fias",
+  "container": null,
+  "collection": null,
+  "url": null,
+  "hint": null,
+  "conditions": [],
+  "sorting": [],
+  "pathChains": [],
+  "metaVersion": "2.0.61.15909"
+}

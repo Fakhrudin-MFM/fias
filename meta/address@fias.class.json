@@ -1,0 +1,484 @@
+{
+  "namespace": "fias",
+  "isStruct": false,
+  "key": [
+    "id"
+  ],
+  "semantic": "region.SHORTNAME| |region.OFFNAME|, |district.SHORTNAME| |district.OFFNAME|, |town.SHORTNAME| |town.OFFNAME|, |place.SHORTNAME| |place.OFFNAME|, |street.SHORTNAME| |street.OFFNAME|, д |house|, кв |flat",
+  "name": "address",
+  "version": "",
+  "caption": "Адрес",
+  "ancestor": null,
+  "container": null,
+  "creationTracker": "",
+  "changeTracker": "",
+  "history": 0,
+  "journaling": false,
+  "compositeIndexes": [],
+  "properties": [
+    {
+      "orderNumber": 10,
+      "name": "id",
+      "caption": "Идентификатор",
+      "type": 12,
+      "size": 24,
+      "decimals": 0,
+      "allowedFileTypes": null,
+      "maxFileCount": 0,
+      "nullable": false,
+      "readonly": true,
+      "indexed": false,
+      "unique": true,
+      "autoassigned": true,
+      "hint": null,
+      "defaultValue": null,
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "binding": "",
+      "semantic": null,
+      "selConditions": [],
+      "selSorting": [],
+      "selectionProvider": null,
+      "indexSearch": false,
+      "eagerLoading": false,
+      "formula": null
+    },
+    {
+      "orderNumber": 30,
+      "name": "region",
+      "caption": "Регион",
+      "type": 13,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": null,
+      "maxFileCount": 0,
+      "nullable": true,
+      "readonly": false,
+      "indexed": false,
+      "unique": false,
+      "autoassigned": false,
+      "hint": null,
+      "defaultValue": "",
+      "refClass": "region",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "binding": "",
+      "semantic": "",
+      "selConditions": [],
+      "selSorting": [],
+      "selectionProvider": null,
+      "indexSearch": false,
+      "eagerLoading": true,
+      "formula": null
+    },
+    {
+      "orderNumber": 40,
+      "name": "district",
+      "caption": "Район",
+      "type": 13,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": null,
+      "maxFileCount": 0,
+      "nullable": true,
+      "readonly": false,
+      "indexed": false,
+      "unique": false,
+      "autoassigned": false,
+      "hint": null,
+      "defaultValue": null,
+      "refClass": "area",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "binding": "",
+      "semantic": "SHORTNAME| |OFFNAME| (|CONTAINER|)",
+      "selConditions": [
+        {
+          "property": "CONTAINER",
+          "operation": 3,
+          "value": null,
+          "nestedConditions": []
+        },
+        {
+          "property": null,
+          "operation": 1,
+          "value": null,
+          "nestedConditions": [
+            {
+              "property": "CONTAINER",
+              "operation": 0,
+              "value": [
+                "$region"
+              ],
+              "nestedConditions": []
+            },
+            {
+              "property": "CONTAINER",
+              "operation": 0,
+              "value": [
+                "$district"
+              ],
+              "nestedConditions": []
+            }
+          ]
+        }
+      ],
+      "selSorting": [],
+      "selectionProvider": null,
+      "indexSearch": false,
+      "eagerLoading": true,
+      "formula": null
+    },
+    {
+      "orderNumber": 50,
+      "name": "town",
+      "caption": "Город",
+      "type": 13,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": null,
+      "maxFileCount": 0,
+      "nullable": true,
+      "readonly": false,
+      "indexed": false,
+      "unique": false,
+      "autoassigned": false,
+      "hint": null,
+      "defaultValue": null,
+      "refClass": "city",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "binding": "",
+      "semantic": "SHORTNAME| |OFFNAME| (|CONTAINER|)",
+      "selConditions": [
+        {
+          "property": "CONTAINER",
+          "operation": 3,
+          "value": null,
+          "nestedConditions": []
+        },
+        {
+          "property": null,
+          "operation": 1,
+          "value": null,
+          "nestedConditions": [
+            {
+              "property": "CONTAINER",
+              "operation": 0,
+              "value": [
+                "$region"
+              ],
+              "nestedConditions": []
+            },
+            {
+              "property": "CONTAINER",
+              "operation": 0,
+              "value": [
+                "$district"
+              ],
+              "nestedConditions": []
+            }
+          ]
+        }
+      ],
+      "selSorting": [],
+      "selectionProvider": null,
+      "indexSearch": false,
+      "eagerLoading": true,
+      "formula": null
+    },
+    {
+      "orderNumber": 55,
+      "name": "place",
+      "caption": "Населённый пункт",
+      "type": 13,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": null,
+      "maxFileCount": 0,
+      "nullable": true,
+      "readonly": false,
+      "indexed": false,
+      "unique": false,
+      "autoassigned": false,
+      "hint": null,
+      "defaultValue": null,
+      "refClass": "place",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "binding": "",
+      "semantic": "SHORTNAME| |OFFNAME| (|CONTAINER|)",
+      "selConditions": [
+        {
+          "property": "CONTAINER",
+          "operation": 3,
+          "value": null,
+          "nestedConditions": []
+        },
+        {
+          "property": null,
+          "operation": 1,
+          "value": null,
+          "nestedConditions": [
+            {
+              "property": "CONTAINER",
+              "operation": 0,
+              "value": [
+                "$region"
+              ],
+              "nestedConditions": []
+            },
+            {
+              "property": "CONTAINER",
+              "operation": 0,
+              "value": [
+                "$district"
+              ],
+              "nestedConditions": []
+            },
+            {
+              "property": "CONTAINER",
+              "operation": 0,
+              "value": [
+                "$town"
+              ],
+              "nestedConditions": []
+            }
+          ]
+        }
+      ],
+      "selSorting": [],
+      "selectionProvider": null,
+      "indexSearch": false,
+      "eagerLoading": true,
+      "formula": null
+    },
+    {
+      "orderNumber": 60,
+      "name": "street",
+      "caption": "Улица",
+      "type": 13,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": null,
+      "maxFileCount": 0,
+      "nullable": true,
+      "readonly": false,
+      "indexed": false,
+      "unique": false,
+      "autoassigned": false,
+      "hint": null,
+      "defaultValue": null,
+      "refClass": "street",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "binding": "",
+      "semantic": "SHORTNAME| |OFFNAME| (|CONTAINER|)",
+      "selConditions": [
+        {
+          "property": "CONTAINER",
+          "operation": 3,
+          "value": null,
+          "nestedConditions": []
+        },
+        {
+          "property": null,
+          "operation": 1,
+          "value": null,
+          "nestedConditions": [
+            {
+              "property": "CONTAINER",
+              "operation": 0,
+              "value": [
+                "$region"
+              ],
+              "nestedConditions": []
+            },
+            {
+              "property": "CONTAINER",
+              "operation": 0,
+              "value": [
+                "$district"
+              ],
+              "nestedConditions": []
+            },
+            {
+              "property": "CONTAINER",
+              "operation": 0,
+              "value": [
+                "$town"
+              ],
+              "nestedConditions": []
+            },
+            {
+              "property": "CONTAINER",
+              "operation": 0,
+              "value": [
+                "$place"
+              ],
+              "nestedConditions": []
+            }
+          ]
+        }
+      ],
+      "selSorting": [],
+      "selectionProvider": null,
+      "indexSearch": false,
+      "eagerLoading": true,
+      "formula": null
+    },
+    {
+      "orderNumber": 70,
+      "name": "house",
+      "caption": "Дом (корпус,строение)",
+      "type": 0,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": null,
+      "maxFileCount": 0,
+      "nullable": true,
+      "readonly": false,
+      "indexed": true,
+      "unique": false,
+      "autoassigned": false,
+      "hint": null,
+      "defaultValue": null,
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "binding": "",
+      "semantic": null,
+      "selConditions": [],
+      "selSorting": [],
+      "selectionProvider": null,
+      "indexSearch": false,
+      "eagerLoading": false,
+      "formula": null
+    },
+    {
+      "orderNumber": 75,
+      "name": "building",
+      "caption": "Корпус",
+      "type": 0,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": null,
+      "maxFileCount": 0,
+      "nullable": true,
+      "readonly": false,
+      "indexed": true,
+      "unique": false,
+      "autoassigned": false,
+      "hint": null,
+      "defaultValue": null,
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "binding": "",
+      "semantic": null,
+      "selConditions": [],
+      "selSorting": [],
+      "selectionProvider": null,
+      "indexSearch": false,
+      "eagerLoading": false,
+      "formula": null
+    },
+    {
+      "orderNumber": 80,
+      "name": "flat",
+      "caption": "Квартира",
+      "type": 0,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": null,
+      "maxFileCount": 0,
+      "nullable": true,
+      "readonly": false,
+      "indexed": true,
+      "unique": false,
+      "autoassigned": false,
+      "hint": null,
+      "defaultValue": null,
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "binding": "",
+      "semantic": null,
+      "selConditions": [],
+      "selSorting": [],
+      "selectionProvider": null,
+      "indexSearch": false,
+      "eagerLoading": false,
+      "formula": null
+    },
+    {
+      "orderNumber": 80,
+      "name": "adressValue",
+      "caption": "Адрес, при отсутствии значений в справочниках",
+      "type": 0,
+      "size": 128,
+      "decimals": 0,
+      "allowedFileTypes": null,
+      "maxFileCount": 0,
+      "nullable": true,
+      "readonly": false,
+      "indexed": true,
+      "unique": false,
+      "autoassigned": false,
+      "hint": null,
+      "defaultValue": null,
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "binding": "",
+      "semantic": null,
+      "selConditions": [],
+      "selSorting": [],
+      "selectionProvider": null,
+      "indexSearch": false,
+      "eagerLoading": false,
+      "formula": null
+    },
+    {
+      "orderNumber": 90,
+      "name": "map",
+      "caption": "Адрес на карте",
+      "type": 100,
+      "size": null,
+      "decimals": 0,
+      "allowedFileTypes": null,
+      "maxFileCount": 0,
+      "nullable": true,
+      "readonly": false,
+      "indexed": true,
+      "unique": false,
+      "autoassigned": false,
+      "hint": null,
+      "defaultValue": null,
+      "refClass": "",
+      "itemsClass": "",
+      "backRef": "",
+      "backColl": "",
+      "binding": "",
+      "semantic": null,
+      "selConditions": [],
+      "selSorting": [],
+      "selectionProvider": null,
+      "indexSearch": false,
+      "eagerLoading": false,
+      "formula": null
+    }
+  ],
+  "metaVersion": "2.0.61.17674"
+}

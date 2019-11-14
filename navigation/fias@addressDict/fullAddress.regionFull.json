@@ -1,0 +1,17 @@
+{
+  "code": "fullAddress.regionFull",
+  "namespace": "fias",
+  "orderNumber": 50,
+  "type": 1,
+  "title": "",
+  "caption": "Регион",
+  "classname": "region@fias",
+  "container": null,
+  "collection": null,
+  "url": null,
+  "hint": null,
+  "conditions": [],
+  "sorting": [],
+  "pathChains": [],
+  "metaVersion": "2.0.61.15909"
+}
