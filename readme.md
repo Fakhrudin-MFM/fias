@@ -36,3 +36,15 @@ git clone https://github.com/iondv/fias.git
 ```
 "refClass": "adress",
 ```
+--------------------------------------------------------------------------  
+
+
+ #### [Licence](/LICENSE) &ensp;  [Contact us](https://iondv.com) &ensp;  [English](/readme.md)   &ensp; [FAQs](/faqs.md)          
+
+<div><img src="https://mc.iondv.com/watch/local/docs/app/fias" style="position:absolute; left:-9999px;" height=1 width=1 alt="iondv metrics"></div>
+
+--------------------------------------------------------------------------  
+
+Copyright (c) 2018 **LLC "ION DV"**.  
+All rights reserved. 
+
